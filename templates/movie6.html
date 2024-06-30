@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Hero 6</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Big Hero 6</h1>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="{{ url_for('static', filename='images/top6.PNG') }}" alt="Movie 6 Poster">
+        </div>
+        <div class="item2">
+            <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+            <video id="video" class="video" controls></video>
+            <script>
+                var video = document.getElementById('video');
+                var hls = new Hls();
+                hls.loadSource('https://multimediakp.arvanvod.ir/vxQXoAeg7b/5zoZPR6Xj3/h_,106_200,178_400,268_540,356_540,534_540,k.mp4.list/master.m3u8');
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                    video.play();
+                });
+            </script>
+        </div>
+        <div class="item3">
+            <p>A special bond develops between plus-sized inflatable robot Baymax and prodigy Hiro Hamada, who together team up with a group of friends to form a band of high-tech heroes.</p>
+        </div>
+        <div class="item4">
+            <p>Director: Don Hall, Chris Williams</p>
+            <p>Year: 2014</p>
+            <p>Genre: Adventure</p>
+            <p>Duration: 1h 42m</p>
+            <p>Type: CDN + HLS</p>
+        </div>
+        <div class="item5">
+            <p>Rate: 7.8/10</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Up</h1>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="{{ url_for('static', filename='images/top5.PNG') }}" alt="Movie 5 Poster">
+        </div>
+        <div class="item2">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.4.0/dash.all.min.js"></script>
+            <video class="video" data-dashjs-player autoplay controls>
+                <source src="https://multimediakp.arvanvod.ir/vxQXoAeg7b/RlX2wjVkPa/h_,144_200,240_400,360_800,480_1500,720_1724,1080_1724,k.mp4.list/manifest.mpd" type="application/dash+xml">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="item3">
+            <p>78-year-old Carl Fredricksen travels to Paradise Falls in his house equipped with balloons, inadvertently taking a young stowaway.</p>
+        </div>
+        <div class="item4">
+            <p>Director: Pete Docter, Bob Peterson</p>
+            <p>Year: 2009</p>
+            <p>Genre: Drama</p>
+            <p>Duration: 1h 36m</p>
+            <p>Type: CDN + DASH</p>
+        </div>
+        <div class="item5">
+            <p>Rate: 8.3/10</p>
+        </div>
+    </div>
+</body>
+</html>

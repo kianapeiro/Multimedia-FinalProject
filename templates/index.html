@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="grid-container">
+        {% for movie in movies %}
+            <div class="grid-item" onclick="location.href='{{ url_for('movie', id=movie.id)}}'">
+                <div class="poster">
+                    <img src="{{ url_for('static', filename='images/top' + movie.id|string + '.PNG') }}" />
+                    <div class="overlay">
+                        <p class="title">{{ movie.title }}</p>
+                        <p>{{ movie.year }}</p>
+                        <p>{{ movie.genre }}</p>
+                        <p>{{ movie.duration }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grave of the Fireflies</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Grave of the Fireflies</h1>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="{{ url_for('static', filename='images/top1.PNG') }}" alt="Movie 1 Poster">
+        </div>
+        <div class="item2">
+            <video class="video" controls>
+                <source src="{{ url_for('static', filename='media/movie1.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="item3">
+            <p>A young boy and his little sister struggle to survive in Japan during World War II.</p>
+        </div>
+        <div class="item4">
+            <p>Director: Isao Takahata</p>
+            <p>Year: 1988</p>
+            <p>Genre: Drama</p>
+            <p>Duration: 1h 29m</p>
+            <p>Type: Local</p>
+        </div>
+        <div class="item5">
+            <p>Rate: 8.5/10</p>
+        </div>
+    </div>
+</body>
+</html>

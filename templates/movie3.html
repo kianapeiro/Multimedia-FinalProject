@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Soul</h1>
+    <div class="grid-container">
+        <div class="item1">
+            <img src="{{ url_for('static', filename='images/top3.PNG') }}" alt="Movie 3 Poster">
+        </div>
+        <div class="item2">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.4.0/dash.all.min.js"></script>
+            <video class="video" data-dashjs-player autoplay controls>
+                <source src="{{ url_for('static', filename='media/movie3/dash/dash.mpd') }}" type="application/dash+xml">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="item3">
+            <p>Joe is a middle-school band teacher whose life hasn't quite gone the way he expected. His true passion is jazz. But when he travels to another realm to help someone find their passion, he soon discovers what it means to have soul.</p>
+        </div>
+        <div class="item4">
+            <p>Director: Pete Docter, Kemp Powers</p>
+            <p>Year: 2020</p>
+            <p>Genre: Comedy</p>
+            <p>Duration: 1h 40m</p>
+            <p>Type: DASH</p>
+        </div>
+        <div class="item5">
+            <p>Rate: 8.0/10</p>
+        </div>
+    </div>
+</body>
+</html>
